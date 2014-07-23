@@ -1,0 +1,18 @@
+#ignore vs
+MarketDataMachine.opensdf
+MarketDataMachine.sdf
+MarketDataMachine.v12.suo
+MarketDataMachine.sln
+
+#ignore Win32
+Win32/
+
+#ignore MainProgram
+MarketDataMachine/ctp
+MarketDataMachine/ctp_temp_file
+MarketDataMachine/data
+MarketDataMachine/Debug
+MarketDataMachine/GeneratedFiles
+GeneratedFiles/Resources
+
+
