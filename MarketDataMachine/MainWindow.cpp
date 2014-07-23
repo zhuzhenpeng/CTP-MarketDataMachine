@@ -8,6 +8,7 @@
 #include <qdebug.h>
 #include <qmessagebox.h>
 #include <qmenubar.h>
+#include <qfiledialog.h>
 using std::shared_ptr;
 using std::make_shared;
 
@@ -98,6 +99,9 @@ void MainWindow::initController(){
 	subController = make_shared<SubscribeController>();
 	//退订控制器与按钮连接
 	connect(subscribeButton, SIGNAL(clicked()), subController.get(), SLOT(subscribe()));
+
+	//数据库写入控制器
+	dbWriterController = make_shared<DBWriterController>();
 }
 
 //创建状态栏
@@ -119,7 +123,10 @@ void MainWindow::createMenu(){
 	selectMenu = menuBar()->addMenu("选择");
 	selectShowMd = new QAction("展示合约", this);
 	connect(selectShowMd, SIGNAL(triggered()), this, SLOT(showSelectMdWindow()));
+	writeToDB = new QAction("写入数据库", this);
+	connect(writeToDB, SIGNAL(triggered()), this, SLOT(selectFileForWriter()));
 	selectMenu->addAction(selectShowMd);
+	selectMenu->addAction(writeToDB);
 }
 
 /************************************槽函数*********************************************************/
@@ -193,4 +200,21 @@ void MainWindow::showSelectMdWindow(){
 		connect(unsubscribeButton, SIGNAL(clicked()), table, SLOT(callUnsubUpdateTimer()));
 	}
 	sMdWindow->showDialog();
+}
+
+//展示对话框让使用者选择文件写入数据库
+void MainWindow::selectFileForWriter(){
+	if (connectController->isConnect() == true){
+		QMessageBox::information(this, "错误", "请断开主机再操作");
+		return;
+	}
+	else{
+		QStringList filenames = QFileDialog::getOpenFileNames(this,"选择行情记录","./data","记录文件 (*.csv)");
+		if (filenames.isEmpty()){
+			return;
+		}
+		else{
+			dbWriterController->readyToWrite(filenames);
+		}
+	}
 }

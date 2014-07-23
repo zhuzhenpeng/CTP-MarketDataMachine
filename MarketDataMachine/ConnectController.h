@@ -12,6 +12,7 @@ public:
 	//连接控制器初始化自己:用于两种情况1.连接失败，2.断开连接
 	void reset();
 	std::shared_ptr<Receiver> getReceiver();
+	bool isConnect();
 private:
 	std::shared_ptr<Receiver> receiver;
 public slots:

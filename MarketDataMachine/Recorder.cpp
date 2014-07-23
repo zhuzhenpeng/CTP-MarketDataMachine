@@ -30,18 +30,19 @@ void Recorder::record(CThostFtdcDepthMarketDataField *data){
 			<< data->BidVolume1 << ","				//申买量一
 			<< data->AskPrice1 << ","				//申卖价一
 			<< data->AskVolume1 << ","				//申卖量一
-			<< data->OpenPrice << ","				//今日开盘价
-			<< data->UpperLimitPrice << ","			//涨停价
-			<< data->LowerLimitPrice << ","			//跌停价
 			<< data->Volume << ","					//当前成交量
 			<< data->OpenInterest << ","				//持仓量
 			<< data->Turnover << ","					//成交金额
-			<< data->SettlementPrice << ","			//本次结算价
-			<< data->PreSettlementPrice << ","		//上次结算价
+			<< data->ClosePrice << ","				//今日收盘价
+			<< data->AveragePrice << ","			//今日均价
+	/****************上面的数据每个时刻都不同，下面的每一天不同**************************/
+			<< data->OpenPrice << ","				//今日开盘价
+			<< data->UpperLimitPrice << ","			//涨停价
+			<< data->LowerLimitPrice << ","			//跌停价
 			<< data->PreClosePrice << ","			//昨收盘价
 			<< data->PreOpenInterest << ","			//昨持仓量
-			<< data->ClosePrice << ","				//今日收盘价
-			<< data->AveragePrice << "\n";			//今日均价
+			<< data->PreSettlementPrice << "\n";		//昨结算价
+
 		recorder.flush();
 	}
 	else{

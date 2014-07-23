@@ -21,3 +21,10 @@ std::set<QString> instruSet;
 
 //交易日
 QString tradeDate;
+
+//数据库资料
+QString DB_DRIVER_NAME;
+QString DB_HOST_NAME;
+QString DATABASE_NAME;
+QString USER_NAME;
+QString PASSWORD;

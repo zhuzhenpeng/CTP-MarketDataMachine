@@ -28,3 +28,10 @@ extern std::set<QString> instruSet;
 
 //交易日
 extern QString tradeDate;
+
+//数据库资料
+extern QString DB_DRIVER_NAME;
+extern QString DB_HOST_NAME;
+extern QString DATABASE_NAME;
+extern QString USER_NAME;
+extern QString PASSWORD;

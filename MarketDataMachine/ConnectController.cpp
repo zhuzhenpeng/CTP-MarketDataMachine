@@ -14,6 +14,16 @@ shared_ptr<Receiver> ConnectController::getReceiver(){
 	return receiver;
 }
 
+//返回一个状态值，是否在连接主机
+bool ConnectController::isConnect(){
+	if (receiver != nullptr){
+		return true;
+	}
+	else{
+		return false;
+	}
+}
+
 /*************************************槽函数***********************************************/
 
 void ConnectController::connectServer(){

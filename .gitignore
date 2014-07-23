@@ -13,6 +13,8 @@ MarketDataMachine/ctp_temp_file
 MarketDataMachine/data
 MarketDataMachine/Debug
 MarketDataMachine/GeneratedFiles
-GeneratedFiles/Resources
+MarketDataMachine/log
+MarketDataMachine/ini
+MarketDataMachine/etc
 
 

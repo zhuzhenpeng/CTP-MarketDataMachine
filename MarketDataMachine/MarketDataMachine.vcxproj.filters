@@ -149,6 +149,12 @@
     <ClCompile Include="GeneratedFiles\Release\moc_MdTable.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
+    <ClCompile Include="DBwriter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DBWriterController.cpp">
+      <Filter>Source Files\controller</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="marketdatamachine.qrc">
@@ -180,6 +186,9 @@
     </CustomBuild>
     <CustomBuild Include="SelectShowMdWindow.h">
       <Filter>Header Files\ui</Filter>
+    </CustomBuild>
+    <CustomBuild Include="DBWriterController.h">
+      <Filter>Header Files\controller</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>

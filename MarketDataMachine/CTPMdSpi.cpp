@@ -65,7 +65,7 @@ void CTPMdSpi::OnRtnDepthMarketData(CThostFtdcDepthMarketDataField *pDepthMarket
 	else{
 		recorderMapping[instruName]->record(pDepthMarketData);	//快速找到记录器并且把行情记录
 	}
-	//更新合约信息
+	//更新全局变量的合约信息
 	QString code(pDepthMarketData->InstrumentID);
 	instruList[code]->update(pDepthMarketData);
 }
