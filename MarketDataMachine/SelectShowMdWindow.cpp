@@ -38,10 +38,13 @@ SelectShowMdWindow::SelectShowMdWindow(){
 	//初始化按钮
 	okButton = new QPushButton("确定");
 	cancelButton = new QPushButton("取消");
+	okButton->setFixedSize(okButton->sizeHint().width(), okButton->sizeHint().height());
+	cancelButton->setFixedSize(cancelButton->sizeHint().width(), cancelButton->sizeHint().height());
 	QHBoxLayout *buttonLayout = new QHBoxLayout();
 	buttonLayout->addWidget(okButton);
 	buttonLayout->addWidget(cancelButton);
 	mainLayout->addLayout(buttonLayout);
+	mainLayout->setAlignment(Qt::AlignRight);
 	connect(cancelButton, SIGNAL(clicked()), this, SLOT(hide()));
 	connect(okButton, SIGNAL(clicked()), this, SLOT(pushOkButton()));
 	setLayout(mainLayout);
@@ -75,6 +78,7 @@ void SelectShowMdWindow::showDialog(){
 	}
 }
 
+//用户点击确定后调用该函数
 void SelectShowMdWindow::pushOkButton(){
 	showedInstru.clear();
 	//复选框选上则放入集合当中
@@ -85,4 +89,9 @@ void SelectShowMdWindow::pushOkButton(){
 	}
 	emit showChange(showedInstru);
 	hide();
+}
+
+//清理已订阅列表
+void SelectShowMdWindow::clearShowedInstru(){
+	showedInstru.clear();
 }

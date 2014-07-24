@@ -7,6 +7,7 @@
 #include <qstring.h>
 #include <map>
 #include <set>
+#include <vector>
 #include "Instrument.h"
 
 //前置机地址
@@ -35,3 +36,6 @@ extern QString DB_HOST_NAME;
 extern QString DATABASE_NAME;
 extern QString USER_NAME;
 extern QString PASSWORD;
+
+//一键订阅的合约名
+extern std::vector<QString> onekeyInstru;

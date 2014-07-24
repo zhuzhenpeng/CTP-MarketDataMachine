@@ -155,6 +155,33 @@
     <ClCompile Include="DBWriterController.cpp">
       <Filter>Source Files\controller</Filter>
     </ClCompile>
+    <ClCompile Include="OnekeySubscribeController.cpp">
+      <Filter>Source Files\controller</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_OnekeySubsribeController.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_OnekeySubsribeController.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_SubscribingDialog.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_SubscribingDialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="SubscribingDialog.cpp">
+      <Filter>Source Files\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="EditOnekeyDialog.cpp">
+      <Filter>Source Files\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_EditOnekeyDialog.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_EditOnekeyDialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="marketdatamachine.qrc">
@@ -172,9 +199,6 @@
     <CustomBuild Include="CTPMdSpi.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="SubscribeController.h">
-      <Filter>Header Files\controller</Filter>
-    </CustomBuild>
     <CustomBuild Include="UnsubscribeController.h">
       <Filter>Header Files\controller</Filter>
     </CustomBuild>
@@ -189,6 +213,18 @@
     </CustomBuild>
     <CustomBuild Include="DBWriterController.h">
       <Filter>Header Files\controller</Filter>
+    </CustomBuild>
+    <CustomBuild Include="OnekeySubsribeController.h">
+      <Filter>Header Files\controller</Filter>
+    </CustomBuild>
+    <CustomBuild Include="SubscribingDialog.h">
+      <Filter>Header Files\ui</Filter>
+    </CustomBuild>
+    <CustomBuild Include="SubscribeController.h">
+      <Filter>Header Files\ui</Filter>
+    </CustomBuild>
+    <CustomBuild Include="EditOnekeyDialog.h">
+      <Filter>Header Files\ui</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>

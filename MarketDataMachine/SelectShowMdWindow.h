@@ -14,6 +14,7 @@ class SelectShowMdWindow :public QDialog{
 public:
 	SelectShowMdWindow();
 	void showDialog();
+	void clearShowedInstru();					//清理已订阅列表
 private:
 	std::set<QString> showedInstru;				//在表格中展示的合约代码集合
 	std::vector<QCheckBox*>  instruCheckBox;	//全部合约的复选框

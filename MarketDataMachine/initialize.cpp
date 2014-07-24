@@ -42,7 +42,7 @@ void iniInstrument(){
 	iniFile.close();
 }
 
-//读取文档初始化数据库信息
+//读取文件初始化数据库信息
 void iniDB(){
 	QSettings setting("ini/db.ini", QSettings::IniFormat);
 	DB_DRIVER_NAME = setting.value("DB_DRIVER_NAME").toString();
@@ -50,4 +50,21 @@ void iniDB(){
 	DATABASE_NAME = setting.value("DATABASE_NAME").toString();
 	USER_NAME = setting.value("USER_NAME").toString();
 	PASSWORD = setting.value("PASSWORD").toString();
+}
+
+//读取文件初始化一键订阅的合约
+void iniOneKeySubscribe(){
+	QFile iniFile("ini/onekeySub.ini");
+	if (!iniFile.open(QIODevice::ReadOnly | QIODevice::Text)){
+		QMessageBox::information(0, "错误", "找不到onekeySub.ini文件");
+		abort();
+	}
+	QString context;
+	QTextStream in(&iniFile);
+	in >> context;
+	QStringList list = context.split(";", QString::SkipEmptyParts);
+	for (int i = 0; i < list.size(); i++){
+		onekeyInstru.push_back(list.at(i));
+	}
+	iniFile.close();
 }

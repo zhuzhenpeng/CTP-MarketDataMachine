@@ -28,3 +28,6 @@ QString DB_HOST_NAME;
 QString DATABASE_NAME;
 QString USER_NAME;
 QString PASSWORD;
+
+//一键订阅的合约名
+std::vector<QString> onekeyInstru;

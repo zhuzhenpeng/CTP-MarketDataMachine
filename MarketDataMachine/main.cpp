@@ -12,6 +12,7 @@ int main(int argc, char *argv[]){
 	iniFrontAdress();
 	iniInstrument();
 	iniDB();
+	iniOneKeySubscribe();
 	MainWindow *mw = new MainWindow();
 	mw->show();
 
