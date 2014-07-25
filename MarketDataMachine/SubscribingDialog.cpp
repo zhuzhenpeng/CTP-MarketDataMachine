@@ -21,6 +21,7 @@ SubscribingDialog::SubscribingDialog(){
 	layout->setAlignment(Qt::AlignHCenter);
 	setLayout(layout);
 	setModal(true);
+	update();
 	hide();
 }
 
@@ -44,6 +45,3 @@ void SubscribingDialog::showDialog(){
 	update();
 	show();
 }
-
-
-

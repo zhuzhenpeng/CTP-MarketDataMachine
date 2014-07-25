@@ -8,13 +8,7 @@ MarketDataMachine.sln
 Win32/
 
 #ignore MainProgram
-MarketDataMachine/ctp
-MarketDataMachine/ctp_temp_file
-MarketDataMachine/data
 MarketDataMachine/Debug
 MarketDataMachine/GeneratedFiles
-MarketDataMachine/log
-MarketDataMachine/ini
-MarketDataMachine/etc
 
 
