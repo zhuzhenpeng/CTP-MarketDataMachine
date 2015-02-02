@@ -9,12 +9,17 @@
 3. 修改（把表名改为相应的合约名）并运行“数据库建表”文件夹内的sql脚本建，配置ini/db.ini文件，程序要把数据持久化到数据库时要用到里面的信息
 4. 配置ini/front.ini文件，配置前置机地址。项目中默认的地址为模拟行情的地址
 
-## 截图
+## 模拟环境截图
 *运行时*
-![image]()
+![image](https://raw.githubusercontent.com/zhuzhenpeng/CTP-MarketDataMachine/master/images/running.jpg)
+<br>
 <br>
 *数据存在data文件夹内*
-![image]()
+![image](https://raw.githubusercontent.com/zhuzhenpeng/CTP-MarketDataMachine/master/images/csv_example1.jpg)
+<br>
+<br>
+*csv里面存着行情数据*
+![image](https://raw.githubusercontent.com/zhuzhenpeng/CTP-MarketDataMachine/master/images/csv_example2.jpg)
 
 ## 环境
 VS2013 + Qt5.3(32位) + mysql(32位)
