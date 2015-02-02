@@ -10,15 +10,15 @@
 4. 配置ini/front.ini文件，配置前置机地址。项目中默认的地址为模拟行情的地址
 
 ## 模拟环境截图
-运行时
+**运行时**
 ![image](https://raw.githubusercontent.com/zhuzhenpeng/CTP-MarketDataMachine/master/images/running.jpg)
 <br>
 <br>
-数据存在data文件夹内
+**数据存在data文件夹内**<br>
 ![image](https://raw.githubusercontent.com/zhuzhenpeng/CTP-MarketDataMachine/master/images/csv_example1.jpg)
 <br>
 <br>
-csv里面存着行情数据
+**csv里面存着行情数据**
 ![image](https://raw.githubusercontent.com/zhuzhenpeng/CTP-MarketDataMachine/master/images/csv_example2.jpg)
 
 ## 环境
